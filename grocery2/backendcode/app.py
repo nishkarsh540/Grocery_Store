@@ -18,6 +18,7 @@ import redis
 from functools import wraps
 from flask_caching import Cache
 
+
 app = Flask(__name__)
 redis_client = redis.Redis(host='localhost', port=6379, db=0)
 cache = Cache(app, config={'CACHE_TYPE': 'redis', 'CACHE_REDIS': redis_client})
